@@ -11,12 +11,12 @@ namespace ConsoleApp3
         /// <summary>
         /// Максимальная температура горения 
         /// </summary>
-         double heatCapacity { get; }
+         double HeatCapacity { get; }
 
         /// <summary>
         /// Время горения единицы ресурса
         /// </summary>
-        TimeSpan combustionTime { get; }
+        TimeSpan CombustionTime { get; }
 
         Task Burn();
     }

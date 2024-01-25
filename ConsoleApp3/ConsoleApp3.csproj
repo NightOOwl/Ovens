@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="AbstractClasses\Metal.cs" />
     <Compile Include="Interfaces\ICombustible .cs" />
-    <Compile Include="Interfaces\IProcessable.cs" />
+    <Compile Include="Interfaces\IProcessableTo.cs" />
     <Compile Include="Interfaces\IStackable.cs" />
     <Compile Include="AbstractClasses\Material.cs" />
     <Compile Include="AbstractClasses\Ore.cs" />
@@ -56,6 +56,7 @@
     <Compile Include="AbstractClasses\Oven.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -15,25 +15,9 @@ namespace ConsoleApp3
     {
         public override float Efficiency => 0.56f;
 
-        public override List<ICombustible> Fuel => Fuel;
+       
 
-        public override List<IProcessable<Metal>> Sourse => Sourse;
-
-        public override List<Metal> Product => Product;
-
-        public override Task HeatTreat()
-        {
-            double temperature = Efficiency * Fuel.First().heatCapacity;
-            if (Fuel.Count > 0 && Sourse.Count >0 && Product.Count < Capacity)
-            {
-                Fuel.Last().Burn();
-                return Sourse.Last().Process(temperature, Fuel.First().combustionTime);
-            }
-            else
-            {
-                throw new InvalidOperationException();
-            }
-        }
+        
     }
 
 }

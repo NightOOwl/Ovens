@@ -9,11 +9,11 @@ namespace ConsoleApp3.AbstractClasses
 {
     public abstract class Metal : Material, IStackable<Metal>
     {
-        public virtual List<Metal> Stack(params Metal[] resoures)
+        public virtual List<Metal> Stack(params Metal[] resouces)
         {
             List<Metal> stack = new List<Metal>();
 
-            foreach (var metal in resoures) 
+            foreach (var metal in resouces) 
             {
                 if (stack.Count < 64)
                 {

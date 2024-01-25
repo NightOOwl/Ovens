@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3.Materials
 {
-    public abstract class Ore : Material, IProcessable<Metal>, IStackable<Ore>
+    public abstract class Ore : Material, IProcessableTo<Metal>, IStackable<Ore>
     {
         public abstract int MinimalProcessTemperature { get; }
-        public abstract TimeSpan ProcessTime { get; }
+        public abstract TimeSpan ProcessTime { get; }        
 
         public abstract Task<Metal> Process(double temperature, TimeSpan fuelBurningTimeRemain);
        
-        public virtual List<Ore> Stack(params Ore[] resoures)
+        public virtual List<Ore> Stack(params Ore[] resouces)
         {
             List<Ore> stack = new List<Ore>();
 
-            foreach (var ore in resoures)
+            foreach (var ore in resouces)
             {
                 if (stack.Count < 64)
                 {
